@@ -1,0 +1,1441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1289</width>
+    <height>861</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="logo.qrc">
+    <normaloff>:/new/prefix1/C:/Users/LCA/Downloads/serial.png</normaloff>:/new/prefix1/C:/Users/LCA/Downloads/serial.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_12">
+    <item>
+     <widget class="QWidget" name="widget_10" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>接收</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QTextBrowser" name="ReceivetextBrowser">
+            <property name="styleSheet">
+             <string notr="true">/* ===== 基础字体格式 ===== */
+QTextEdit {
+    /* 字体家族 */
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    
+    /* 字体大小 */
+    font-size: 16px;
+    
+    /* 字体粗细 */
+    font-weight: normal; /* normal | bold | 100-900 */
+    
+    /* 字体样式 */
+    font-style: normal; /* normal | italic | oblique */
+    
+    /* 字母间距 */
+    letter-spacing: 0.5px;
+    
+    /* 行高 */
+    line-height: 1.5;
+    
+    /* 文本颜色 */
+    color: #333333;
+    
+    /* 背景颜色 */
+    background-color: #ffffff;
+    
+    /* 文本对齐 */
+    text-align: left; /* left | right | center | justify */
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_9" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>636</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ClearReceiveArea_pushButton">
+               <property name="styleSheet">
+                <string notr="true">/* 浅色渐变基础按钮 */
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #a8d8ff, stop:1 #7bb4ff); /* 浅蓝色渐变 */
+    border-radius: 12px;             /* 稍小的圆角 */
+    color: #333333;                  /* 深灰文字 */
+    font-family: 'Segoe UI';         /* 字体 */
+    font-size: 18px;                /* 更小字号 */
+    font-weight: normal;             /* 普通粗细 */
+    padding: 6px 14px;               /* 更小内边距 */
+    border: 1px solid #c0d1e0;       /* 浅色边框 */
+    min-width: 90px;                 /* 更小宽度 */
+    min-height: 18px;                /* 更小高度 */
+}
+
+/* 悬停效果 */
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #bae0ff, stop:1 #8cc3ff);
+    border: 1px solid #a0c0e0;       /* 悬停时边框加深 */
+}
+
+/* 按下效果 */
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #8cc1f0, stop:1 #6ca5e0);
+    padding: 7px 13px 5px 15px;      /* 轻微按下效果 */
+    border: 1px solid #90a9c0;
+}
+
+/* 禁用状态 */
+QPushButton:disabled {
+    background-color: #e0e6eb;
+    color: #a0a0a0;
+    border: 1px solid #d0d8e0;
+}
+
+/* 特殊状态按钮 */
+QPushButton:checked {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #ffd8a8, stop:1 #ffb47b); /* 选中状态橙色 */
+    color: #333333;
+}</string>
+               </property>
+               <property name="text">
+                <string>清空接收区</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>发送</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QTextEdit" name="SendtextEdit">
+            <property name="styleSheet">
+             <string notr="true">/* ===== 基础字体格式 ===== */
+QTextEdit {
+    /* 字体家族 */
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    
+    /* 字体大小 */
+    font-size: 16px;
+    
+    /* 字体粗细 */
+    font-weight: normal; /* normal | bold | 100-900 */
+    
+    /* 字体样式 */
+    font-style: normal; /* normal | italic | oblique */
+    
+    /* 字母间距 */
+    letter-spacing: 0.5px;
+    
+    /* 行高 */
+    line-height: 1.5;
+    
+    /* 文本颜色 */
+    color: #333333;
+    
+    /* 背景颜色 */
+    background-color: #ffffff;
+    
+    /* 文本对齐 */
+    text-align: left; /* left | right | center | justify */
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_12" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>532</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_11" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <widget class="QPushButton" name="ClearSendAreapushButton">
+                  <property name="styleSheet">
+                   <string notr="true">/* 浅色渐变基础按钮 */
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #a8d8ff, stop:1 #7bb4ff); /* 浅蓝色渐变 */
+    border-radius: 12px;             /* 稍小的圆角 */
+    color: #333333;                  /* 深灰文字 */
+    font-family: 'Segoe UI';         /* 字体 */
+    font-size: 18px;                /* 更小字号 */
+    font-weight: normal;             /* 普通粗细 */
+    padding: 6px 14px;               /* 更小内边距 */
+    border: 1px solid #c0d1e0;       /* 浅色边框 */
+    min-width: 90px;                 /* 更小宽度 */
+    min-height: 18px;                /* 更小高度 */
+}
+
+/* 悬停效果 */
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #bae0ff, stop:1 #8cc3ff);
+    border: 1px solid #a0c0e0;       /* 悬停时边框加深 */
+}
+
+/* 按下效果 */
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #8cc1f0, stop:1 #6ca5e0);
+    padding: 7px 13px 5px 15px;      /* 轻微按下效果 */
+    border: 1px solid #90a9c0;
+}
+
+/* 禁用状态 */
+QPushButton:disabled {
+    background-color: #e0e6eb;
+    color: #a0a0a0;
+    border: 1px solid #d0d8e0;
+}
+
+/* 特殊状态按钮 */
+QPushButton:checked {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #ffd8a8, stop:1 #ffb47b); /* 选中状态橙色 */
+    color: #333333;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>清空发送区</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="SendpushButton">
+                  <property name="styleSheet">
+                   <string notr="true">/* 浅色渐变基础按钮 */
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #a8d8ff, stop:1 #7bb4ff); /* 浅蓝色渐变 */
+    border-radius: 12px;             /* 稍小的圆角 */
+    color: #333333;                  /* 深灰文字 */
+    font-family: 'Segoe UI';         /* 字体 */
+    font-size: 18px;                /* 更小字号 */
+    font-weight: normal;             /* 普通粗细 */
+    padding: 6px 14px;               /* 更小内边距 */
+    border: 1px solid #c0d1e0;       /* 浅色边框 */
+    min-width: 50px;                 /* 更小宽度 */
+    min-height: 18px;                /* 更小高度 */
+}
+
+/* 悬停效果 */
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #bae0ff, stop:1 #8cc3ff);
+    border: 1px solid #a0c0e0;       /* 悬停时边框加深 */
+}
+
+/* 按下效果 */
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #8cc1f0, stop:1 #6ca5e0);
+    padding: 7px 13px 5px 15px;      /* 轻微按下效果 */
+    border: 1px solid #90a9c0;
+}
+
+/* 禁用状态 */
+QPushButton:disabled {
+    background-color: #e0e6eb;
+    color: #a0a0a0;
+    border: 1px solid #d0d8e0;
+}
+
+/* 特殊状态按钮 */
+QPushButton:checked {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #ffd8a8, stop:1 #ffb47b); /* 选中状态橙色 */
+    color: #333333;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>发送</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QComboBox" name="ComPortNum_comboBox">
+            <property name="styleSheet">
+             <string notr="true">/* 基础样式 */
+QComboBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 8px 32px 8px 12px;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    color: #374151;
+    min-height: 30px;
+    selection-background-color: #f3f4f6;
+    selection-color: #111827;
+}
+
+/* 悬停状态 */
+QComboBox:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+}
+
+/* 按下/打开状态 */
+QComboBox:on {
+    border-color: #3b82f6;
+}
+
+/* 禁用状态 */
+QComboBox:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+}
+
+/* 下拉按钮区域 */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 32px;
+    border-left: 1px solid #e5e7eb;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: transparent;
+}
+
+/* 下拉按钮悬停 */
+QComboBox:hover::drop-down {
+    background-color: #f3f4f6;
+}
+
+/* 下拉菜单样式 */
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-top: 4px; /* 防止下拉菜单与组合框重叠 */
+    padding: 4px 0;
+    outline: none; /* 移除选中时的虚线框 */
+    min-width: 120px;
+}
+
+/* 下拉菜单项 */
+QComboBox QAbstractItemView::item {
+    padding: 8px 16px;
+    color: #374151;
+    border-radius: 4px;
+    margin: 2px 6px;
+    min-height: 32px;
+}
+
+/* 下拉菜单选中项 */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* 下拉菜单悬停项 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #f3f4f6;
+}
+
+/* 带图标的组合框 */
+QComboBox[hasIcons=&quot;true&quot;] {
+    padding-left: 36px;
+}
+
+/* 编辑框模式 */
+QComboBox:editable {
+    background-color: white;
+}
+
+QComboBox:editable:on {
+    background-color: white;
+    border-color: #3b82f6;
+}
+
+/* 焦点状态 */
+QComboBox:focus {
+    border-color: #3b82f6;
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;串口号&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="RefreshSerialPort_pushButton">
+            <property name="styleSheet">
+             <string notr="true">/* 浅色渐变基础按钮 */
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #a8d8ff, stop:1 #7bb4ff); /* 浅蓝色渐变 */
+    border-radius: 12px;             /* 稍小的圆角 */
+    color: #333333;                  /* 深灰文字 */
+    font-family: 'Segoe UI';         /* 字体 */
+    font-size: 18px;                /* 更小字号 */
+    font-weight: normal;             /* 普通粗细 */
+    padding: 6px 14px;               /* 更小内边距 */
+    border: 1px solid #c0d1e0;       /* 浅色边框 */
+    min-width: 50px;                 /* 更小宽度 */
+    min-height: 18px;                /* 更小高度 */
+}
+
+/* 悬停效果 */
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #bae0ff, stop:1 #8cc3ff);
+    border: 1px solid #a0c0e0;       /* 悬停时边框加深 */
+}
+
+/* 按下效果 */
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #8cc1f0, stop:1 #6ca5e0);
+    padding: 7px 13px 5px 15px;      /* 轻微按下效果 */
+    border: 1px solid #90a9c0;
+}
+
+/* 禁用状态 */
+QPushButton:disabled {
+    background-color: #e0e6eb;
+    color: #a0a0a0;
+    border: 1px solid #d0d8e0;
+}
+
+/* 特殊状态按钮 */
+QPushButton:checked {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #ffd8a8, stop:1 #ffb47b); /* 选中状态橙色 */
+    color: #333333;
+}</string>
+            </property>
+            <property name="text">
+             <string>刷新</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_3" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QComboBox" name="BaudRate_comboBox">
+            <property name="styleSheet">
+             <string notr="true">/* 基础样式 */
+QComboBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 8px 32px 8px 12px;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    color: #374151;
+    min-height: 36px;
+    selection-background-color: #f3f4f6;
+    selection-color: #111827;
+}
+
+/* 悬停状态 */
+QComboBox:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+}
+
+/* 按下/打开状态 */
+QComboBox:on {
+    border-color: #3b82f6;
+}
+
+/* 禁用状态 */
+QComboBox:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+}
+
+/* 下拉按钮区域 */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 32px;
+    border-left: 1px solid #e5e7eb;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: transparent;
+}
+
+/* 下拉按钮悬停 */
+QComboBox:hover::drop-down {
+    background-color: #f3f4f6;
+}
+
+/* 下拉菜单样式 */
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-top: 4px; /* 防止下拉菜单与组合框重叠 */
+    padding: 4px 0;
+    outline: none; /* 移除选中时的虚线框 */
+    min-width: 120px;
+}
+
+/* 下拉菜单项 */
+QComboBox QAbstractItemView::item {
+    padding: 8px 16px;
+    color: #374151;
+    border-radius: 4px;
+    margin: 2px 6px;
+    min-height: 32px;
+}
+
+/* 下拉菜单选中项 */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* 下拉菜单悬停项 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #f3f4f6;
+}
+
+/* 带图标的组合框 */
+QComboBox[hasIcons=&quot;true&quot;] {
+    padding-left: 36px;
+}
+
+/* 编辑框模式 */
+QComboBox:editable {
+    background-color: white;
+}
+
+QComboBox:editable:on {
+    background-color: white;
+    border-color: #3b82f6;
+}
+
+/* 焦点状态 */
+QComboBox:focus {
+    border-color: #3b82f6;
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;波特率&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QComboBox" name="DataBit_comboBox">
+            <property name="styleSheet">
+             <string notr="true">/* 基础样式 */
+QComboBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 8px 32px 8px 12px;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    color: #374151;
+    min-height: 36px;
+    selection-background-color: #f3f4f6;
+    selection-color: #111827;
+}
+
+/* 悬停状态 */
+QComboBox:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+}
+
+/* 按下/打开状态 */
+QComboBox:on {
+    border-color: #3b82f6;
+}
+
+/* 禁用状态 */
+QComboBox:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+}
+
+/* 下拉按钮区域 */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 32px;
+    border-left: 1px solid #e5e7eb;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: transparent;
+}
+
+/* 下拉按钮悬停 */
+QComboBox:hover::drop-down {
+    background-color: #f3f4f6;
+}
+
+/* 下拉菜单样式 */
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-top: 4px; /* 防止下拉菜单与组合框重叠 */
+    padding: 4px 0;
+    outline: none; /* 移除选中时的虚线框 */
+    min-width: 120px;
+}
+
+/* 下拉菜单项 */
+QComboBox QAbstractItemView::item {
+    padding: 8px 16px;
+    color: #374151;
+    border-radius: 4px;
+    margin: 2px 6px;
+    min-height: 32px;
+}
+
+/* 下拉菜单选中项 */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* 下拉菜单悬停项 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #f3f4f6;
+}
+
+/* 带图标的组合框 */
+QComboBox[hasIcons=&quot;true&quot;] {
+    padding-left: 36px;
+}
+
+/* 编辑框模式 */
+QComboBox:editable {
+    background-color: white;
+}
+
+QComboBox:editable:on {
+    background-color: white;
+    border-color: #3b82f6;
+}
+
+/* 焦点状态 */
+QComboBox:focus {
+    border-color: #3b82f6;
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;数据位&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_5" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QComboBox" name="StopBit_comboBox">
+            <property name="styleSheet">
+             <string notr="true">/* 基础样式 */
+QComboBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 8px 32px 8px 12px;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    color: #374151;
+    min-height: 36px;
+    selection-background-color: #f3f4f6;
+    selection-color: #111827;
+}
+
+/* 悬停状态 */
+QComboBox:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+}
+
+/* 按下/打开状态 */
+QComboBox:on {
+    border-color: #3b82f6;
+}
+
+/* 禁用状态 */
+QComboBox:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+}
+
+/* 下拉按钮区域 */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 32px;
+    border-left: 1px solid #e5e7eb;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: transparent;
+}
+
+/* 下拉按钮悬停 */
+QComboBox:hover::drop-down {
+    background-color: #f3f4f6;
+}
+
+/* 下拉菜单样式 */
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-top: 4px; /* 防止下拉菜单与组合框重叠 */
+    padding: 4px 0;
+    outline: none; /* 移除选中时的虚线框 */
+    min-width: 120px;
+}
+
+/* 下拉菜单项 */
+QComboBox QAbstractItemView::item {
+    padding: 8px 16px;
+    color: #374151;
+    border-radius: 4px;
+    margin: 2px 6px;
+    min-height: 32px;
+}
+
+/* 下拉菜单选中项 */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* 下拉菜单悬停项 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #f3f4f6;
+}
+
+/* 带图标的组合框 */
+QComboBox[hasIcons=&quot;true&quot;] {
+    padding-left: 36px;
+}
+
+/* 编辑框模式 */
+QComboBox:editable {
+    background-color: white;
+}
+
+QComboBox:editable:on {
+    background-color: white;
+    border-color: #3b82f6;
+}
+
+/* 焦点状态 */
+QComboBox:focus {
+    border-color: #3b82f6;
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;停止位&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_6" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QComboBox" name="Parity_comboBox">
+            <property name="styleSheet">
+             <string notr="true">/* 基础样式 */
+QComboBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 8px 32px 8px 12px;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    color: #374151;
+    min-height: 36px;
+    selection-background-color: #f3f4f6;
+    selection-color: #111827;
+}
+
+/* 悬停状态 */
+QComboBox:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+}
+
+/* 按下/打开状态 */
+QComboBox:on {
+    border-color: #3b82f6;
+}
+
+/* 禁用状态 */
+QComboBox:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+}
+
+/* 下拉按钮区域 */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 32px;
+    border-left: 1px solid #e5e7eb;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: transparent;
+}
+
+/* 下拉按钮悬停 */
+QComboBox:hover::drop-down {
+    background-color: #f3f4f6;
+}
+
+/* 下拉菜单样式 */
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-top: 4px; /* 防止下拉菜单与组合框重叠 */
+    padding: 4px 0;
+    outline: none; /* 移除选中时的虚线框 */
+    min-width: 120px;
+}
+
+/* 下拉菜单项 */
+QComboBox QAbstractItemView::item {
+    padding: 8px 16px;
+    color: #374151;
+    border-radius: 4px;
+    margin: 2px 6px;
+    min-height: 32px;
+}
+
+/* 下拉菜单选中项 */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* 下拉菜单悬停项 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #f3f4f6;
+}
+
+/* 带图标的组合框 */
+QComboBox[hasIcons=&quot;true&quot;] {
+    padding-left: 36px;
+}
+
+/* 编辑框模式 */
+QComboBox:editable {
+    background-color: white;
+}
+
+QComboBox:editable:on {
+    background-color: white;
+    border-color: #3b82f6;
+}
+
+/* 焦点状态 */
+QComboBox:focus {
+    border-color: #3b82f6;
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;校验位&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_13" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <widget class="QComboBox" name="FlowControl_comboBox">
+            <property name="styleSheet">
+             <string notr="true">/* 基础样式 */
+QComboBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 8px 32px 8px 12px;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    color: #374151;
+    min-height: 36px;
+    selection-background-color: #f3f4f6;
+    selection-color: #111827;
+}
+
+/* 悬停状态 */
+QComboBox:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+}
+
+/* 按下/打开状态 */
+QComboBox:on {
+    border-color: #3b82f6;
+}
+
+/* 禁用状态 */
+QComboBox:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+}
+
+/* 下拉按钮区域 */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 32px;
+    border-left: 1px solid #e5e7eb;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: transparent;
+}
+
+/* 下拉按钮悬停 */
+QComboBox:hover::drop-down {
+    background-color: #f3f4f6;
+}
+
+/* 下拉菜单样式 */
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-top: 4px; /* 防止下拉菜单与组合框重叠 */
+    padding: 4px 0;
+    outline: none; /* 移除选中时的虚线框 */
+    min-width: 120px;
+}
+
+/* 下拉菜单项 */
+QComboBox QAbstractItemView::item {
+    padding: 8px 16px;
+    color: #374151;
+    border-radius: 4px;
+    margin: 2px 6px;
+    min-height: 32px;
+}
+
+/* 下拉菜单选中项 */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* 下拉菜单悬停项 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #f3f4f6;
+}
+
+/* 带图标的组合框 */
+QComboBox[hasIcons=&quot;true&quot;] {
+    padding-left: 36px;
+}
+
+/* 编辑框模式 */
+QComboBox:editable {
+    background-color: white;
+}
+
+QComboBox:editable:on {
+    background-color: white;
+    border-color: #3b82f6;
+}
+
+/* 焦点状态 */
+QComboBox:focus {
+    border-color: #3b82f6;
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;填充流控&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_7" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QComboBox" name="ReceiveType_comboBox">
+            <property name="styleSheet">
+             <string notr="true">/* 基础样式 */
+QComboBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 8px 32px 8px 12px;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    color: #374151;
+    min-height: 36px;
+    selection-background-color: #f3f4f6;
+    selection-color: #111827;
+}
+
+/* 悬停状态 */
+QComboBox:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+}
+
+/* 按下/打开状态 */
+QComboBox:on {
+    border-color: #3b82f6;
+}
+
+/* 禁用状态 */
+QComboBox:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+}
+
+/* 下拉按钮区域 */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 32px;
+    border-left: 1px solid #e5e7eb;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: transparent;
+}
+
+/* 下拉按钮悬停 */
+QComboBox:hover::drop-down {
+    background-color: #f3f4f6;
+}
+
+/* 下拉菜单样式 */
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-top: 4px; /* 防止下拉菜单与组合框重叠 */
+    padding: 4px 0;
+    outline: none; /* 移除选中时的虚线框 */
+    min-width: 120px;
+}
+
+/* 下拉菜单项 */
+QComboBox QAbstractItemView::item {
+    padding: 8px 16px;
+    color: #374151;
+    border-radius: 4px;
+    margin: 2px 6px;
+    min-height: 32px;
+}
+
+/* 下拉菜单选中项 */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* 下拉菜单悬停项 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #f3f4f6;
+}
+
+/* 带图标的组合框 */
+QComboBox[hasIcons=&quot;true&quot;] {
+    padding-left: 36px;
+}
+
+/* 编辑框模式 */
+QComboBox:editable {
+    background-color: white;
+}
+
+QComboBox:editable:on {
+    background-color: white;
+    border-color: #3b82f6;
+}
+
+/* 焦点状态 */
+QComboBox:focus {
+    border-color: #3b82f6;
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;接收格式&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_8" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QComboBox" name="SendType_comboBox">
+            <property name="styleSheet">
+             <string notr="true">/* 基础样式 */
+QComboBox {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    padding: 8px 32px 8px 12px;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    color: #374151;
+    min-height: 36px;
+    selection-background-color: #f3f4f6;
+    selection-color: #111827;
+}
+
+/* 悬停状态 */
+QComboBox:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+}
+
+/* 按下/打开状态 */
+QComboBox:on {
+    border-color: #3b82f6;
+}
+
+/* 禁用状态 */
+QComboBox:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+}
+
+/* 下拉按钮区域 */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 32px;
+    border-left: 1px solid #e5e7eb;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: transparent;
+}
+
+/* 下拉按钮悬停 */
+QComboBox:hover::drop-down {
+    background-color: #f3f4f6;
+}
+
+/* 下拉菜单样式 */
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-top: 4px; /* 防止下拉菜单与组合框重叠 */
+    padding: 4px 0;
+    outline: none; /* 移除选中时的虚线框 */
+    min-width: 120px;
+}
+
+/* 下拉菜单项 */
+QComboBox QAbstractItemView::item {
+    padding: 8px 16px;
+    color: #374151;
+    border-radius: 4px;
+    margin: 2px 6px;
+    min-height: 32px;
+}
+
+/* 下拉菜单选中项 */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* 下拉菜单悬停项 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #f3f4f6;
+}
+
+/* 带图标的组合框 */
+QComboBox[hasIcons=&quot;true&quot;] {
+    padding-left: 36px;
+}
+
+/* 编辑框模式 */
+QComboBox:editable {
+    background-color: white;
+}
+
+QComboBox:editable:on {
+    background-color: white;
+    border-color: #3b82f6;
+}
+
+/* 焦点状态 */
+QComboBox:focus {
+    border-color: #3b82f6;
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;发送格式&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>串口连接状态</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QPushButton" name="ConnectSerial_pushButton">
+            <property name="styleSheet">
+             <string notr="true">/* 浅色渐变基础按钮 */
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #a8d8ff, stop:1 #7bb4ff); /* 浅蓝色渐变 */
+    border-radius: 12px;             /* 稍小的圆角 */
+    color: #333333;                  /* 深灰文字 */
+    font-family: 'Segoe UI';         /* 字体 */
+    font-size: 18px;                /* 更小字号 */
+    font-weight: normal;             /* 普通粗细 */
+    padding: 6px 14px;               /* 更小内边距 */
+    border: 1px solid #c0d1e0;       /* 浅色边框 */
+    min-width: 50px;                 /* 更小宽度 */
+    min-height: 18px;                /* 更小高度 */
+}
+
+/* 悬停效果 */
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #bae0ff, stop:1 #8cc3ff);
+    border: 1px solid #a0c0e0;       /* 悬停时边框加深 */
+}
+
+/* 按下效果 */
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #8cc1f0, stop:1 #6ca5e0);
+    padding: 7px 13px 5px 15px;      /* 轻微按下效果 */
+    border: 1px solid #90a9c0;
+}
+
+/* 禁用状态 */
+QPushButton:disabled {
+    background-color: #e0e6eb;
+    color: #a0a0a0;
+    border: 1px solid #d0d8e0;
+}
+
+/* 特殊状态按钮 */
+QPushButton:checked {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #ffd8a8, stop:1 #ffb47b); /* 选中状态橙色 */
+    color: #333333;
+}</string>
+            </property>
+            <property name="text">
+             <string>连接</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="DisconnectSerial_pushButton">
+            <property name="styleSheet">
+             <string notr="true">/* 浅色渐变基础按钮 */
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #a8d8ff, stop:1 #7bb4ff); /* 浅蓝色渐变 */
+    border-radius: 12px;             /* 稍小的圆角 */
+    color: #333333;                  /* 深灰文字 */
+    font-family: 'Segoe UI';         /* 字体 */
+    font-size: 18px;                /* 更小字号 */
+    font-weight: normal;             /* 普通粗细 */
+    padding: 6px 14px;               /* 更小内边距 */
+    border: 1px solid #c0d1e0;       /* 浅色边框 */
+    min-width: 50px;                 /* 更小宽度 */
+    min-height: 18px;                /* 更小高度 */
+}
+
+/* 悬停效果 */
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #bae0ff, stop:1 #8cc3ff);
+    border: 1px solid #a0c0e0;       /* 悬停时边框加深 */
+}
+
+/* 按下效果 */
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #8cc1f0, stop:1 #6ca5e0);
+    padding: 7px 13px 5px 15px;      /* 轻微按下效果 */
+    border: 1px solid #90a9c0;
+}
+
+/* 禁用状态 */
+QPushButton:disabled {
+    background-color: #e0e6eb;
+    color: #a0a0a0;
+    border: 1px solid #d0d8e0;
+}
+
+/* 特殊状态按钮 */
+QPushButton:checked {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #ffd8a8, stop:1 #ffb47b); /* 选中状态橙色 */
+    color: #333333;
+}</string>
+            </property>
+            <property name="text">
+             <string>断开</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1289</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="logo.qrc"/>
+ </resources>
+ <connections/>
+</ui>
