@@ -72,3 +72,17 @@ void SerialWorker::startReceiveDataSub()
     emit serialReceiveData(data);
 }
 
+void SerialWorker::writeData(const QByteArray &data){
+    if (m_serialPort && m_serialPort->isOpen()) {
+        qint64 bytesWritten = m_serialPort->write(data);
+        if (bytesWritten == -1) {
+            qDebug() << "发送数据失败:" << m_serialPort->errorString();
+        } else {
+            // qDebug() << "成功发送" << bytesWritten << "字节数据";
+            m_serialPort->flush(); // 确保数据立即发送
+        }
+    } else {
+        qDebug() << "串口未打开，无法发送数据";
+    }
+}
+

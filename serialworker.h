@@ -27,6 +27,8 @@ public slots:
 
     void startReceiveDataSub();
 
+    void writeData(const QByteArray &data);
+
 signals:
     void dataReceived(const QByteArray &data);
 

@@ -44,6 +44,8 @@ private slots:
 
     void serialReceiveData(QByteArray data);
 
+    void on_SendpushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 
@@ -65,6 +67,8 @@ signals:
     void RefreshSerialPort();
 
     void startReceivData();
+
+    void sendSerialMessage(const QByteArray &message);
 
 };
 #endif // MAINWINDOW_H

@@ -69,6 +69,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(this,&MainWindow::startReceivData,m_serialWorker,&SerialWorker::startReceiveDataSub);
     connect(m_serialWorker,&SerialWorker::serialReceiveData,this,&MainWindow::serialReceiveData);
 
+    connect(this,&MainWindow::sendSerialMessage,m_serialWorker,&SerialWorker::writeData);
+
     // 开启配置串口任务
     m_serialThread->start();
 
@@ -274,5 +276,45 @@ void MainWindow::serialReceiveData(QByteArray data)
         cursor.movePosition(QTextCursor::End);
         ui->ReceivetextBrowser->setTextCursor(cursor);
     }
+}
+
+void MainWindow::on_SendpushButton_clicked()
+{
+    // 获取发送文本框的内容
+    QString sendData = ui->SendtextEdit->toPlainText();
+    if (sendData.isEmpty()) {
+        ui->ReceivetextBrowser->append("错误: 发送数据为空");
+        return;
+    }
+
+    // 获取发送格式
+    QString sendFormat = ui->SendType_comboBox->currentText();
+    QByteArray dataToSend;
+
+    if (sendFormat == "HEX") {
+        // 处理十六进制格式数据
+        QStringList hexValues = sendData.split(' ', Qt::SkipEmptyParts);
+        bool isValid = true;
+
+        for (const QString &hex : hexValues) {
+            bool ok;
+            unsigned char byte = static_cast<unsigned char>(hex.toUInt(&ok, 16));
+            if (ok) {
+                dataToSend.append(byte);
+            } else {
+                isValid = false;
+                ui->ReceivetextBrowser->append(QString("错误: 无效的十六进制值 '%1'").arg(hex));
+                break;
+            }
+        }
+
+        if (!isValid) {
+            return;
+        }
+    } else {
+        // 文本格式
+        dataToSend = sendData.toLocal8Bit();
+    }
+    emit sendSerialMessage(dataToSend);
 }
 
